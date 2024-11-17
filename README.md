@@ -22,26 +22,7 @@ Mongoose (MongoDB ODM)
 Authentication:
 
 JWT (JSON Web Token) for secure authentication
-Project Structure
-bash
-Copy code
-/my-todo-app
-  ├── /backend            # Backend API (Node.js/Express)
-  │   ├── /models         # Mongoose models (User, Todo, SubTodo)
-  │   ├── /routes         # API Routes
-  │   ├── /controllers    # Controller logic for API routes
-  │   ├── server.js       # Entry point for the backend
-  │   └── /middleware     # JWT authentication middleware
-  ├── /frontend           # Frontend React application
-  │   ├── /src            # React source files
-  │   ├── /components     # React components (Todo, SubTodo, Auth forms)
-  │   ├── /services       # Axios service for API calls
-  │   └── App.js          # Main React component
-  ├── .env                # Environment variables for backend (DB URI, JWT secret)
-  ├── .gitignore          # Git ignore file
-  ├── package.json        # Backend and frontend dependencies
-  └── README.md           # Project readme (this file)
-Setup & Installation
+
 Prerequisites
 Node.js and npm must be installed.
 MongoDB must be installed locally or use a service like MongoDB Atlas.
