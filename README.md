@@ -1,6 +1,3 @@
-
-Got it! Here's an even more concise README that focuses on the app overview, features, and tech stack, with no code snippets or endpoint details:
-
 MERN Stack Todo App with File Uploads
 A MERN stack Todo application that allows users to authenticate, create and manage main todos and subtasks, with the ability to upload and store images using Multer and Cloudinary.
 
