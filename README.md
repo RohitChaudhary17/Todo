@@ -1,178 +1,31 @@
-MERN Stack Todo App
-A MERN Stack application that allows users to authenticate, create main todos, create multiple subtodos, and update their todos and subtodos. The app follows a simple user authentication system and offers the ability to manage tasks with hierarchical structure (Main Todos and Subtasks).
+
+Got it! Here's an even more concise README that focuses on the app overview, features, and tech stack, with no code snippets or endpoint details:
+
+MERN Stack Todo App with File Uploads
+A MERN stack Todo application that allows users to authenticate, create and manage main todos and subtasks, with the ability to upload and store images using Multer and Cloudinary.
 
 Features
-User Authentication: Users can register and log in to the app.
-Main Todo Creation: Users can create main todos (primary tasks).
-Subtasks: Users can add multiple subtasks under a main todo.
-Update Todo/Subtodo: Users can update both main todos and subtasks.
-CRUD Operations: Full CRUD functionality for todos and subtasks.
+User Authentication: Secure login and registration.
+Main Todos: Create, update, and delete main todos (tasks).
+Subtasks: Add, update, and delete subtasks under main todos.
+File Uploads: Upload images (e.g., for todos or subtasks) using Multer and store them on Cloudinary.
+CRUD Operations: Complete management of todos and subtasks.
 Tech Stack
-Frontend:
-
-React.js (Frontend UI)
-Axios (For API requests)
-React Router (For navigation)
+Frontend: React.js, Axios
+Backend: Node.js, Express.js, MongoDB, JWT Authentication, Multer (file uploads)
+Cloud Storage: Cloudinary (for storing images)
+Setup
 Backend:
 
-Node.js
-Express.js (Backend Framework)
-MongoDB (Database)
-Mongoose (MongoDB ODM)
-Authentication:
+Install dependencies: npm install
+Set up environment variables for MongoDB, JWT, and Cloudinary in a .env file.
+Start the server: npm start
+Frontend:
 
-JWT (JSON Web Token) for secure authentication
-
-Prerequisites
-Node.js and npm must be installed.
-MongoDB must be installed locally or use a service like MongoDB Atlas.
-Backend Setup
-Navigate to the backend folder:
-
-bash
-Copy code
-cd backend
-Install dependencies:
-
-bash
-Copy code
-npm install
-Create a .env file in the backend folder and add the following environment variables:
-
-makefile
-Copy code
-MONGO_URI=<Your MongoDB URI>
-JWT_SECRET=<Your JWT Secret>
-PORT=5000
-Run the backend server:
-
-bash
-Copy code
-npm start
-The backend server should now be running on http://localhost:5000.
-
-Frontend Setup
-Navigate to the frontend folder:
-
-bash
-Copy code
-cd frontend
-Install dependencies:
-
-bash
-Copy code
-npm install
-Start the frontend development server:
-
-bash
-Copy code
-npm start
-The frontend application should now be running on http://localhost:3000.
-
-API Endpoints
-POST /api/auth/register: Register a new user.
-
-Request body: { "username": "your-username", "password": "your-password" }
-POST /api/auth/login: Login and get a JWT token.
-
-Request body: { "username": "your-username", "password": "your-password" }
-GET /api/todos: Get all todos for the authenticated user.
-
-Requires Authorization: Bearer <JWT> header.
-POST /api/todos: Create a new main todo.
-
-Request body: { "title": "Main Todo Title", "description": "Main Todo Description" }
-Requires Authorization: Bearer <JWT> header.
-GET /api/todos/
-: Get a specific main todo by ID.
-
-Requires Authorization: Bearer <JWT> header.
-PUT /api/todos/
-: Update a main todo.
-
-Request body: { "title": "Updated Title", "description": "Updated Description" }
-Requires Authorization: Bearer <JWT> header.
-DELETE /api/todos/
-: Delete a main todo.
-
-Requires Authorization: Bearer <JWT> header.
-POST /api/todos/
-/subtodos: Add a subtask to a main todo.
-
-Request body: { "title": "Subtask Title", "completed": false }
-Requires Authorization: Bearer <JWT> header.
-PUT /api/subtodos/
-: Update a subtask.
-
-Request body: { "title": "Updated Subtask Title", "completed": true }
-Requires Authorization: Bearer <JWT> header.
-DELETE /api/subtodos/
-: Delete a subtask.
-
-Requires Authorization: Bearer <JWT> header.
-Authentication & JWT
-User Registration: Users need to register first by sending a POST request to /api/auth/register with a username and password. A hashed password is stored in MongoDB.
-
-User Login: After registration, users can log in by sending a POST request to /api/auth/login. Upon successful login, a JWT token will be returned. This token is used for authenticating API requests.
-
-JWT Middleware: A middleware checks if the request contains a valid JWT token. If valid, the user data is attached to the request.
-
-Authorization: Every endpoint that requires authentication checks for the Authorization header with a Bearer token.
-
-Frontend Details
-Main Todos Page: Displays all the todos for the authenticated user. Users can create, update, and delete main todos.
-Subtasks: For each main todo, users can add multiple subtasks. Each subtask can be marked as complete and updated individually.
-Authentication: Includes login and registration forms for user authentication. A JWT token is stored in localStorage and used for API requests.
-Example Usage
-Register a new user:
-bash
-Copy code
-POST /api/auth/register
-{
-  "username": "john_doe",
-  "password": "securepassword"
-}
-Login:
-bash
-Copy code
-POST /api/auth/login
-{
-  "username": "john_doe",
-  "password": "securepassword"
-}
-Response:
-
-json
-Copy code
-{
-  "token": "your-jwt-token"
-}
-Create a new Todo:
-bash
-Copy code
-POST /api/todos
-Authorization: Bearer <your-jwt-token>
-{
-  "title": "Finish MERN project",
-  "description": "Complete the MERN stack Todo app"
-}
-Add a Subtask:
-bash
-Copy code
-POST /api/todos/<todoId>/subtodos
-Authorization: Bearer <your-jwt-token>
-{
-  "title": "Create backend API",
-  "completed": false
-}
-Update a Todo/Subtodo:
-bash
-Copy code
-PUT /api/todos/<todoId>
-Authorization: Bearer <your-jwt-token>
-{
-  "title": "Finish MERN stack app",
-  "description": "Ensure that both frontend and backend are working"
-}
+Install dependencies: npm install
+Start the app: npm start
+Cloudinary Integration
+Multer is used in the backend to handle file uploads.
+Images are stored on Cloudinary for efficient and scalable media management.
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
