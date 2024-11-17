@@ -1,0 +1,59 @@
+/* SideBar.module.css */
+.sidebar_main {
+  width: 300px;
+  height: calc(100vh - 55px);
+  border: 1px solid red;
+  position: relative;
+  transition: left 0.3s ease;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.open {
+  left: 0;
+}
+
+.closed {
+  left: -300px;
+}
+
+/* Sidebar items */
+.sidebar_item {
+  display: block;  /* Makes the Link a block element to make it clickable as a button */
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;  /* Remove underline */
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar_item:hover {
+  background-color: #ddd;
+}
+
+.sidebar_item:active {
+  background-color: #007bff; /* Optional: Add active color */
+  color: white;
+}
+
+
+
+.logout button{
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  border: none;
+}

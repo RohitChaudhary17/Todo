@@ -1,0 +1,6 @@
+.edit_profile_main{
+  width: 100%;
+  height: calc(100vh - 55px);
+  border: 1px solid red;
+}
+

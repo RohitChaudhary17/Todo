@@ -1,0 +1,60 @@
+
+
+.profile_card{
+  border: 1px solid red;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_image {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 5px;;
+  border: 1px solid rgb(0, 17, 255);
+}
+
+.profile_image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile_details {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+
+}
+
+.profile_details_inner{
+ padding: 20px;
+}
+
+.profile_name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.profile_username {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.profile_email {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.profile_todos {
+  font-size: 16px;
+  color: #333;
+}

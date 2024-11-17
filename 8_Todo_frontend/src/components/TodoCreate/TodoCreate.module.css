@@ -1,0 +1,104 @@
+/* Container for the entire Todo creation section */
+.todo_create {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+.todo_create__title {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Form styling */
+.todo_create__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Field container (label and input) */
+.todo_create__field {
+  margin-bottom: 1.5rem;
+}
+
+/* Label for inputs */
+.todo_create__label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* General input styling */
+.todo_create__input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.todo_create__input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Color input specific style */
+.todo_create__input_color {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* File input specific style */
+.todo_create__input_file {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Submit button styling */
+.todo_create__submit_button {
+  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.todo_create__submit_button:hover {
+  background-color: #0056b3;
+}
+
+/* Image preview section */
+.todo_create__image_preview {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.todo_create__image {
+  max-width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,46 @@
+.home_main{
+  border: 2px solid green;
+  position: relative;
+
+}
+
+.home_nav{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.main_content_area{
+  width: 100%;
+  height: calc(100% - 55px);
+  background-color: azure;
+  display: flex;
+  position: relative;
+}
+
+.content_area{
+  border: 1px solid blue;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  transition: left 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideOpen{
+  width: calc(100% - 300px);
+  transition: width 0.3s ease;
+}
+
+.sideClose{
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+.home_footer{
+  width: 100%;
+  text-align: center;
+}
